@@ -1,12 +1,14 @@
 import express from 'express';
 import projectsRoutes from './routes/projectsRoutes.js'
+import tasksRoutes from './routes/taskRoutes.js'
 
 const app = express();
 
 //middlewares
-app.use(express.json())
+app.use(express.json());
 
 
-app.use(projectsRoutes)
+app.use(projectsRoutes);
+app.use(tasksRoutes);
 
 export default app;
