@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 
-const DB_USER = "postgres";
-const DB_PASSWORD = "pato123";
-const DB_HOST = "localhost:5432";
+const {
+  DB_USER, DB_PASSWORD, DB_HOST,
+} = process.env;
 
 export const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/projectsdb`,
